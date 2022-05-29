@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的基本使用</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id = "root">
+    <h2>欢迎你，{{name}}</h2>
+    <button v-on:click="showinfo1">点我让我去学习 不传参</button>
+    <button v-on:click="showinfo2($event,66)">点我让我继续学习(传参)</button>
+</div>
+  <script>
+      new Vue({
+
+      })
+ new Vue({
+     el:'#root',
+     data:{
+         name:"Hanson"
+     },
+     methods:{
+         showinfo1(event){
+             alert("请让我去学习")
+             console.log(event)
+         },
+         showinfo2(event,number){
+           alert("同学你好!!")
+             console.log(number)
+         }
+     }
+ })
+
+  </script>
+
+
+</body>
+</html>
